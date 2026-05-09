@@ -51,26 +51,23 @@ The PyTorch models achieved the strongest scores in these runs, with the final P
 ├── models/
 │   ├── README.md
 │   └── trained/              # Local model artifacts, ignored by Git
-├── notebooks/
-│   ├── 01_data_loading_memory_vs_generator.ipynb
-│   ├── 02_keras_data_pipeline.ipynb
-│   ├── 03_pytorch_data_pipeline.ipynb
-│   ├── 04_keras_cnn_classifier.ipynb
-│   ├── 05_pytorch_cnn_classifier.ipynb
-│   ├── 06_keras_vs_pytorch_cnn_comparison.ipynb
-│   ├── 07_keras_cnn_vit_hybrid.ipynb
-│   ├── 08_pytorch_cnn_vit_hybrid.ipynb
-│   └── 09_final_cnn_vit_evaluation.ipynb
 ├── reports/
-│   ├── figures/
 │   └── results_summary.md
-├── scripts/                # Python exports of the notebooks
+├── scripts/
+│   ├── 01_data_loading_memory_vs_generator.py
+│   ├── 02_keras_data_pipeline.py
+│   ├── 03_pytorch_data_pipeline.py
+│   ├── 04_keras_cnn_classifier.py
+│   ├── 05_pytorch_cnn_classifier.py
+│   ├── 06_keras_vs_pytorch_cnn_comparison.py
+│   ├── 07_keras_cnn_vit_hybrid.py
+│   ├── 08_pytorch_cnn_vit_hybrid.py
+│   └── 09_final_cnn_vit_evaluation.py
 ├── src/
 │   ├── config.py
 │   ├── data_utils.py
 │   ├── metrics.py
 │   └── visualization.py
-├── .gitignore
 ├── LICENSE
 └── requirements.txt
 ```
@@ -92,6 +89,18 @@ Run the notebooks in order if you want to reproduce the full workflow:
 ## Python Scripts
 
 The `scripts/` folder contains cleaned `.py` exports of the notebooks. These are included so GitHub reviewers can browse the project as source code without opening every notebook.
+
+The exported scripts are:
+
+1. `01_data_loading_memory_vs_generator.py`
+2. `02_keras_data_pipeline.py`
+3. `03_pytorch_data_pipeline.py`
+4. `04_keras_cnn_classifier.py`
+5. `05_pytorch_cnn_classifier.py`
+6. `06_keras_vs_pytorch_cnn_comparison.py`
+7. `07_keras_cnn_vit_hybrid.py`
+8. `08_pytorch_cnn_vit_hybrid.py`
+9. `09_final_cnn_vit_evaluation.py`
 
 The notebooks remain the best narrative version because they preserve explanations, outputs, and visualizations. The scripts are better for quick code review, search, and future refactoring.
 
@@ -121,3 +130,8 @@ This project began as an IBM/Coursera deep learning capstone lab sequence. I reo
 - Export selected plots from notebooks into `reports/figures/`.
 - Add a lightweight Streamlit demo for interactive predictions.
 - Track experiments with a reproducible configuration file.
+
+## License
+
+This project is licensed under the Apache License 2.0. See [`LICENSE`](LICENSE) for the full license text.
+
