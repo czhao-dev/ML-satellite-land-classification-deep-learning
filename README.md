@@ -45,12 +45,6 @@ The PyTorch models achieved the strongest scores in these runs, with the final P
 
 ```text
 .
-├── data/
-│   ├── README.md
-│   └── raw/                  # Local dataset archive, ignored by Git
-├── models/
-│   ├── README.md
-│   └── trained/              # Local model artifacts, ignored by Git
 ├── scripts/
 │   ├── 01_data_loading_memory_vs_generator.py
 │   ├── 02_keras_data_pipeline.py
@@ -67,6 +61,8 @@ The PyTorch models achieved the strongest scores in these runs, with the final P
 │   ├── metrics.py
 │   └── visualization.py
 ├── LICENSE
+├── data.md
+├── models.md
 ├── results_summary.md
 └── requirements.txt
 ```
