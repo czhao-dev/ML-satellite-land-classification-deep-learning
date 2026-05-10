@@ -22,7 +22,7 @@ Classify satellite image tiles into agricultural and non-agricultural land categ
 
 ## Interpretation
 
-All models performed strongly on the balanced satellite image dataset. The PyTorch CNN and PyTorch CNN-ViT hybrid produced the highest overall scores in these notebook runs.
+All models performed strongly on the balanced satellite image dataset. The PyTorch CNN and PyTorch CNN-ViT hybrid produced the highest overall scores in these recorded runs.
 
 The CNN baselines were already highly effective, suggesting that local visual patterns in the satellite tiles are strong indicators of agricultural land. The CNN-ViT hybrids add a transformer component that can model broader spatial relationships, which is useful for land-use imagery where texture, field boundaries, and larger spatial patterns can matter together.
 
