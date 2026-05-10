@@ -22,7 +22,7 @@ The dataset contains 6,000 JPG satellite tiles:
 | `class_0_non_agri` | Non-agricultural land | 3,000 |
 | `class_1_agri` | Agricultural land | 3,000 |
 
-The original lab notebooks download the dataset from IBM Skills Network cloud storage:
+The project data pipeline downloads the dataset from IBM Skills Network cloud storage:
 
 ```text
 https://cf-courses-data.s3.us.cloud-object-storage.appdomain.cloud/4Z1fwRR295-1O3PMQBH6Dg/images-dataSAT.tar
@@ -67,25 +67,11 @@ The PyTorch models achieved the strongest scores in these runs, with the final P
 └── requirements.txt
 ```
 
-## Notebook Guide
-
-Run the notebooks in order if you want to reproduce the full workflow:
-
-1. Compare memory-based and generator-based image loading.
-2. Build Keras data loading and augmentation pipelines.
-3. Build PyTorch data loading and augmentation pipelines.
-4. Train and evaluate a Keras CNN classifier.
-5. Train and evaluate a PyTorch CNN classifier.
-6. Compare Keras and PyTorch CNN models.
-7. Build a Keras CNN-ViT hybrid model.
-8. Build a PyTorch CNN-ViT hybrid model.
-9. Evaluate and compare the final CNN-ViT hybrid models.
-
 ## Python Scripts
 
-The `scripts/` folder contains cleaned `.py` exports of the notebooks. These are included so GitHub reviewers can browse the project as source code without opening every notebook.
+The `scripts/` folder contains the project workflow as Python source code, organized from data loading through final model evaluation.
 
-The exported scripts are:
+The Python scripts are:
 
 1. `01_data_loading_memory_vs_generator.py`
 2. `02_keras_data_pipeline.py`
@@ -97,7 +83,7 @@ The exported scripts are:
 8. `08_pytorch_cnn_vit_hybrid.py`
 9. `09_final_cnn_vit_evaluation.py`
 
-The notebooks remain the best narrative version because they preserve explanations, outputs, and visualizations. The scripts are better for quick code review, search, and future refactoring.
+These scripts are intended for code review, search, and future refactoring.
 
 ## Setup
 
@@ -109,20 +95,16 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Then launch Jupyter:
+Run or inspect the Python scripts in `scripts/` for the source workflow.
 
-```bash
-jupyter notebook
-```
+## Project Background
 
-## Portfolio Notes
-
-This project began as an IBM/Coursera deep learning capstone lab sequence. I reorganized it into a portfolio-ready repository with a clear workflow, documented results, reusable helper modules, and GitHub-friendly handling for large data and model artifacts.
+This project began as an IBM/Coursera deep learning capstone sequence. I reorganized it into a portfolio-ready repository with a clear Python workflow, documented results, reusable helper modules, and GitHub-friendly handling for large data and model artifacts.
 
 ## Next Improvements
 
 - Add a small inference script for classifying a new satellite tile.
-- Export selected plots from notebooks into `reports/figures/`.
+- Export selected plots from model runs into `reports/figures/`.
 - Add a lightweight Streamlit demo for interactive predictions.
 - Track experiments with a reproducible configuration file.
 
